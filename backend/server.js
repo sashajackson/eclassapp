@@ -13,11 +13,12 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions));
+app.use(express.static(buildPath));
 
 app.listen(port, () => {
     console.log('listening on ', port);
 })
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(buildPath, 'index.html'));
  });
