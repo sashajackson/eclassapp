@@ -1,14 +1,15 @@
 import React, {Component} from 'react'
+import './../styles/styles.css'
 
 class Header extends Component {
     render(){
         return(
-            <div style={headerBackground} className="d-flex bd-highlight mb-3">
+            <div style={headerBackground} className="d-flex bd-highlight">
                 <div className="me-auto p-2 bd-highlight">
-                    <button className="btn btn-lg btn-outline-secondary">
-                        Teach on eClass
+                    <button className="btn btn-md instructorBtn btn-primary">
+                        Become an Instructor
                     </button>
-                    <button className="btn btn-lg btn-outline-secondary ms-2">
+                    <button className="btn btn-md ms-2 offerBtn btn-secondary">
                         About                       
                     </button>
                 </div>
@@ -17,23 +18,22 @@ class Header extends Component {
                     <input style={input} type="text" className="form-control" placeholder="search anything" aria-label="search" aria-describedby="basic-addon1"/>
                 </div>
                 <div className="p-2 ps-0 bd-highlight">
-                    <button className="btn btn-lg btn-outline-success" type="button">Login</button>
+                    <button className="btn btn-md btn-primary" type="button">Login</button>
                 </div>
                 <div className="p-2 ps-0 bd-highlight">
-                    <button className="btn btn-lg btn-outline-secondary" type="button">Sign Up</button>
+                    <button className="btn btn-md btn-success" type="button">Sign Up</button>
                 </div>
             </div>
         )
     }
 }
 const headerBackground = {
-    background:'#f4f4f4',
+    background:'#2d3945',
     boxShadow: 'rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px',
+    zIndex:'100',
 }
 const input = {
     borderRadius:'30px',
-    height:'48px',
-    width:'300px',
     marginRight:'3em',
 }
 const iconStyle = {

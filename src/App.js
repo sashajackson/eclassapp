@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
+import {Route, Router} from 'react-router-dom'
+import history from './history'
 import './App.css';
 import Header from './components/header'
-import Class from './components/class'
+import SignUp from './components/signUp'
 
 class App extends Component {
   state = {
@@ -11,12 +13,20 @@ class App extends Component {
   render(){
     return (
       <div className="">
-        <Header />
-        <Class students={this.state.students}/>
+
+        <Router history={history}>
+
+          <Route exact path='/'>
+            <Header />
+            <SignUp />
+          </Route>
+
+        </Router>
       </div>
     )
   }
 }
+
 
 
 export default App;
